@@ -24,12 +24,15 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.ScriptInjector;
 
 /**
- * @author pmeyer
+ * @author Payam Meyer
  */
 public class FileUploadEntryPoint implements EntryPoint {
 
-	@Override
-	public void onModuleLoad() {
-		ScriptInjector.fromString(FileUploadClientBundle.INSTANCE.fileUpload().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
-	}
+    @Override
+    public void onModuleLoad() {
+        ScriptInjector.fromString(FileUploadClientBundle.INSTANCE.fileUpload().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
+        ScriptInjector.fromString(FileUploadClientBundle.INSTANCE.fileUploadMain().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
+        ScriptInjector.fromString(FileUploadClientBundle.INSTANCE.fileUploadValidate().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
+        ScriptInjector.fromString(FileUploadClientBundle.INSTANCE.fileUploadIframe().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
+    }
 }

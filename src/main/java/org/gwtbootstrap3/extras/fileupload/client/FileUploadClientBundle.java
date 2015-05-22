@@ -25,13 +25,21 @@ import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.TextResource;
 
 /**
- * @author pmeyer
+ * @author Payam Meyer
  */
 public interface FileUploadClientBundle extends ClientBundle {
 
-	FileUploadClientBundle INSTANCE = GWT.create(FileUploadClientBundle.class);
+    FileUploadClientBundle INSTANCE = GWT.create(FileUploadClientBundle.class);
 
-	@Source("resource/js/jquery.fileupload.cache.js")
-	TextResource fileUpload();
+    @Source("resources/js/jquery.fileupload.cache.js")
+    TextResource fileUpload();
 
+    @Source("resources/js/jquery.fileupload-main.cache.js")
+    TextResource fileUploadMain();
+
+    @Source("resources/js/jquery.fileupload-validate.cache.js")
+    TextResource fileUploadValidate();
+
+    @Source("resources/js/jquery.iframe-transport.cache.js")
+    TextResource fileUploadIframe();
 }
